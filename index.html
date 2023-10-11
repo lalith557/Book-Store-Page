@@ -1,76 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Login Page</title>
-  </head>
-  <body>
-    <div class="container" id="container">
-      <div class="form-container sign-up">
-        <form>
-          <h1>Create Account</h1>
-          <div class="social-icons">
-            <a href="#" class="icon"
-              ><i class="fa-brands fa-google-plus-g"></i
-            ></a>
-            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-            <a href="#" class="icon"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-          </div>
-          <span>or use your email for registration</span>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <button>Sign Up</button>
-        </form>
-      </div>
-      <div class="form-container sign-in">
-        <form>
-          <h1>Sign In</h1>
-          <div class="social-icons">
-            <a href="#" class="icon"
-              ><i class="fa-brands fa-google-plus-g"></i
-            ></a>
-            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-            <a href="#" class="icon"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-          </div>
-          <span>or use your email password</span>
+<html>
 
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <a href="#">Forgot your Password?</a>
-          <button>Sign In</button>
-        </form>
-      </div>
-      <div class="toggle-container">
-        <div class="toggle">
-          <div class="toggle-panel toggle-left">
-            <h1>Welcome Back!</h1>
-            <p>Enter your personal details to use all of site features</p>
-            <button class="hidden" id="login">Sign In</button>
-          </div>
-          <div class="toggle-panel toggle-right">
-            <h1>Hello, Friend!</h1>
-            <p>
-              Register with your personal details to use all of site features
-            </p>
-            <button class="hidden" id="register">Sign Up</button>
-          </div>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="section_popularbook">
+        <div class="top_container">
+            <div>
+                <h1 class="top_main_heading">Popular Book</h1>
+                <div class="top_card_container d-flex flex-row">
+                    <div>
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/book-apj-img.png" class="top_img1">
+                    </div>
+                    <div class="top_text_container">
+                        <h1 class="top_heading1">Wings of Fire</h1>
+                        <p class="top_para1">An Autobiography of Abdul Kalam</p>
+                        <h1 class="top_heading2">by Arun Tiwari</h1>
+                        <button class="top_button btn btn-primary" onclick="display('section_wingsoffire')">Read Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="center_container">
+                <h1 class="center_main_heading">Recommened Books</h1>
+                <div class="center_card_container d-flex flex-row">
+                    <div>
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/book-chetan-bhagat-img.png" class="center_img1">
+                    </div>
+                    <div class="center_text_container">
+                        <h1 class="center_heading1">Top 3 mistakes of my life</h1>
+                        <p class="center_para1">Indian author <br> by Chetan Bhagat</p>
+                        <button class="center_button btn btn-primary" onclick="display('section_the3mistakesofmylife')">Read Now</button>
+                    </div>
+                </div>
+                <div class="buttom_card_container d-flex flex-row">
+                    <div>
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/harrypotter-img.png" class="center_img1">
+                    </div>
+                    <div class="center_text_container">
+                        <h1 class="center_heading1">Harry Potter</h1>
+                        <p class="center_para1">and the Sorcerer's Stone <br> by J.K Rowling</p>
+                        <button class="center_button btn btn-primary" onclick="display('section_harrypotter')">Read Now</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    <div id="section_wingsoffire">
+        <div class="book_details_page">
+            <div class="d-flex flex-column">
+                <div>
+                    <div class="d-flex flex-row justify-content-center">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/book-apj-img.png" class="img">
+                    </div>
+                    <div class="text_align">
+                        <h1 class="heading1">Wings of Fire</h1>
+                        <h6 class="heading6">By Arun Tiwari</h6>
+                        <p class="para1">
+                            Every common man who by his sheer grit and hard work achieves success should share his story with the rest fot they may find inspiration and strength to go on, in his story. The 'Wings of Fire' is one such autobiography by visionary scientiest Dr. APJ Abdul Kalam, who from very humble beginings rose to be the President of India. The book is full of insights, personal moments and life experience of Dr. Kalam. It gives us an understanding on his journey of success.
+                        </p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <div>
+                                <button class="top_button btn btn-warning" onclick="display('section_popularbook')">Back</button>
+                            </div>
+                            <div class="button">
+                                <button class="top_button btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section_the3mistakesofmylife">
+        <div class="book_details_page">
+            <div class="d-flex flex-column">
+                <div>
+                    <div class="d-flex flex-row justify-content-center">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/book-chetan-bhagat-img.png">
+                    </div>
+                    <div class="text_align">
+                        <h1 class="heading1">The 3 mistakes of my life</h1>
+                        <h6 class="heading6">by Chetan Bhagat</h6>
+                        <div>
+                            <p class="para1">
+                                The 3 mistakes of mt life is the third novel written by eminent Indian Author Chetan Bhagat. Based on cricket, business and religion, the novel is set against the backdrop of beautiful city Ahmedabad. Revolving around three young indian boys Omi, Ishaan and Govind, the book goes on to narrate how the three are trying their best to make ends meet in the city. Based on real Events, the books starts with a dramatic twist, where Bhagat is reading an e-mail sent by some young person Govind.
+                            </p>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <div>
+                                <button class="top_button btn btn-warning" onclick="display('section_popularbook')">Back</button>
+                            </div>
+                            <div class="button">
+                                <button class="top_button btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section_harrypotter">
+        <div class="book_details_page">
+            <div class="d-flex flex-column">
+                <div>
+                    <div class="d-flex flex-row justify-content-center">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/harrypotter-img.png">
+                    </div>
+                    <div class="text_align">
+                        <h1 class="heading1">Harry Potter</h1>
+                        <h6 class="heading6">by J.K Rowling</h6>
+                        <p class="para1">
+                            Harry Potter's life is miserable. His parents are dead and he's stuck with his heartless relatives, who force to live in a tiny closet under the stairs. But his fortune changes when he recieves a letter that tells him the truth about himself: he's a wizard. A mysterious visitor rescues him from his relatives and takes him to his to his new home, Hogwarts School of Witchcraft and Wizardry. After a lifetime of booting up his magical powers, Harry finally feels like a normal kid.
+                        </p>
+                        <div class="d-flex flex-row justify-content-center">
+                            <div>
+                                <button class="top_button btn btn-warning" onclick="display('section_popularbook')">Back</button>
+                            </div>
+                            <div class="button">
+                                <button class="top_button btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
 
-    <script src="script.js"></script>
-  </body>
 </html>
